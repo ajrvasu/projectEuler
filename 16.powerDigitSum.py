@@ -6,7 +6,6 @@ for digit in str(2**1000):
     sum += int(digit)
 print(sum)
 
-"""
-print(sum(int(i) for i in str(2**1000)))
+# Using List comprehensions
 
-"""
+print(sum(int(i) for i in str(2**1000)))

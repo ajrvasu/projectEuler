@@ -16,8 +16,9 @@ def factorialSum(number):
 
 factorialSum(number)
 
-"""
+# Factorial sum using List comprehension
+
 print(sum(int(i) for i in str(factorial(100))))
-"""
+
         
 

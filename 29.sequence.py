@@ -8,4 +8,4 @@ def sequence(n):
     [sequence.append(k) for k in list if k not in sequence]
     print(sequence)
 
-sequence(5)
+sequence(7)

@@ -21,9 +21,6 @@ def fibTotal():
         else:
             oddList.append(curr)
             list.append(curr)
-    print(list)
-    print(evenList)
-    print(oddList)
-    print(total)
+    return total
 
 fibTotal()
