@@ -10,7 +10,13 @@ for i in range(1,101):
     sum += i
 squareOfSum = sum**2
 difference = squareOfSum - sumOfSquares
+print(difference)
 
-# Using List comprehension
+# Using a generator expression
 
 print((sum(i for i in range(1,101)))**2 - sum(i**2 for i in range(1,101)))
+
+
+# Using a list comprehension
+
+print((sum([i for i in range(1,101)]))**2 - sum([i**2 for i in range(1,101)]))

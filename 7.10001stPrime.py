@@ -5,16 +5,13 @@ import math
 
 list =[]
 i=1
-while len(list) < 11:
-    print(len(list))
-    print(list)
+while len(list) < 10001:
     i += 1
     for j in range(2,int(math.sqrt(i))+1):
         if i % j == 0:
             break
     else:
         list.append(i)
-print(list)        
-print(len(list))
+       
 print(list[-1])
     

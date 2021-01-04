@@ -5,8 +5,9 @@ def factorial(n):
         return 1
     else:
         return n * factorial(n-1)    
+
 number = factorial(100)
-print(number)
+
 
 def factorialSum(number):   
     sum = 0
@@ -16,9 +17,14 @@ def factorialSum(number):
 
 factorialSum(number)
 
-# Factorial sum using List comprehension
+# Factorial sum using generator expression
 
 print(sum(int(i) for i in str(factorial(100))))
 
+
+# Factorial sum using list comprehension
+
+
+print(sum([int(i) for i in str(factorial(100))]))
         
 
