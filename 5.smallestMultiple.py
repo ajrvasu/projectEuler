@@ -9,7 +9,6 @@ def isdivisible(n,k):
             return False
     return True
 
-
 def smallestNumber(n):
     fact = math.factorial(n)
     smallestNumber = 1
