@@ -1,23 +1,28 @@
 """ Problem 10 - Find the sum of all the primes below two million """
 
+# Expected answer - 142913828922
+
+
+import time
 import math
 
-def sumOfPrimes(n):
-    if n > 1:
-        list =[]
-        for i in range(2,n+1):
-            for j in range(2,int(math.sqrt(i))+1):
-                if i % j == 0:
-                    break
-            else:
-                list.append(i)
-        print(list)
-        print(len(list))
-        print(sum(list))
-    else:
-        print("Not a valid input, enter a whole number which is greater than 1.")
+start = time.time()
 
-sumOfPrimes(2000000)
+def sumOfPrimes(n):
+    list =[]
+    for i in range(2,n+1):
+        for j in range(2,int(math.sqrt(i))+1):
+            if i % j == 0:
+                break
+        else:
+            list.append(i)
+    return sum(i for i in list)
+    
+print(sumOfPrimes(2_000_000))
+
+end = time.time()
+print("Duration:", round(end-start),"sec")
+
 
 
 

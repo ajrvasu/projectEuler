@@ -6,6 +6,10 @@ for i in range(1,1000):
         sum += i
 print(sum)
 
-# Using List comprehension
+# Using a generator expression
 
 print(sum(i for i in range(1,1000) if i % 3 == 0 or i % 5== 0))
+
+# Using a list comprehension
+
+print(sum([i for i in range(1,1000) if i % 3 == 0 or i % 5== 0]))
