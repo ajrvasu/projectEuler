@@ -23,4 +23,4 @@ def fibTotal():
             list.append(curr)
     return total
 
-fibTotal()
+print(fibTotal())
