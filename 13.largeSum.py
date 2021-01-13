@@ -1,5 +1,7 @@
 """ Work out the first ten digits of the sum of the following one-hundred 50-digit numbers."""
 
+# Expected answer - 5537376230
+
 # Converting number.txt file into a list of digits 
 
 filename = "euler13.txt"
@@ -17,7 +19,6 @@ for i in array:
 
 list = sum(newArray, [])
 
-# Identifying the first ten digits of the sum 
 
 def largeSum(n,list):
     sum = 0

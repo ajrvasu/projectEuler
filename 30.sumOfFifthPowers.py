@@ -2,9 +2,9 @@
 1634 = 1^4 + 6^4 + 3^4 + 4^4
 8208 
 9474 
-As 1 = 1^4 is not a sum it is not included.
+As 1 = 1^4 is not a sum it is not included. The sum of these numbers is 1634 + 8208 + 9474 = 19316. Find the sum of all the numbers that can be written as the sum of fifth powers of their digits."""
 
-The sum of these numbers is 1634 + 8208 + 9474 = 19316. Find the sum of all the numbers that can be written as the sum of fifth powers of their digits."""
+# Expected answer - 443839
 
 # The maximum uppper bound is 5 * 9^5 =295_245, round off to 300_000.
 

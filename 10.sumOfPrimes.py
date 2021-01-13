@@ -2,7 +2,6 @@
 
 # Expected answer - 142913828922
 
-
 import time
 import math
 
