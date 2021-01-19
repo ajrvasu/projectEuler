@@ -3,7 +3,7 @@
 # Expected answer - 55
 
 import math
-from itertools import permutations
+import itertools 
 
 def isPrime(n):
     for i in range(2,int(math.sqrt(n))+1):
@@ -12,28 +12,27 @@ def isPrime(n):
             break
     else:
         return True
-    
-def permutation(n):
-    list =[int(i) for i in str(n)]
-    newLst = []
-    for i in permutations(list):
-        newLst.append(i)
-    numbers = [int(''.join([str(j) for j in i]))for i in newLst]
-    return numbers
+
+def permutations(n):
+    lst = list(itertools.permutations(str(n)))
+    permutations =[]
+    primes =[]
+    unique =[]
+    for tuple in lst:
+        permutations.append(''.join(tuple))
+    for number in permutations:
+        if not isPrime(int(number)):
+            break
+    else:    
+        primes.append(int(number))
+    unique = list(set(primes))
+    return unique
 
 def circularPrimes(n):
     circularPrimes =[]
     for i in range(2,n+1):
-        for j in range(len(permutation(i))):
-            if isPrime(permutation(i)[j]) == True:
-                circularPrimes.append(permutation(i)[j])
-    return circularPrimes
+        circularPrimes.append(permutations(i))
+    flat = [item for sublist in circularPrimes for item in sublist]
+    return sorted(list(set(flat))), len(sorted(list(set(flat))))
 
-def length(n):
-    list = circularPrimes(n)
-    sortedList = sorted(list)
-    uniqueList =[]
-    [uniqueList.append(i) for i in sortedList if i !=1 and i not in uniqueList]
-    return uniqueList
-            
-print(length(1_000_000))
+print(circularPrimes(100000))

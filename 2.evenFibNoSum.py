@@ -6,7 +6,7 @@ even-valued terms"""
 
 # Expected answer - 796
 
-def fibTotal():
+def fibTotal(n):
     prev, curr = 1,2
     list = [prev,curr]
     evenList =[2]
@@ -14,7 +14,7 @@ def fibTotal():
     total = 0
     while True:
         prev, curr = curr, prev + curr
-        if curr >= 1_000:
+        if curr >= n:
             break
         elif curr % 2 == 0:
             total += curr
@@ -25,4 +25,4 @@ def fibTotal():
             list.append(curr)
     return total
 
-print(fibTotal())
+print(fibTotal(1000))

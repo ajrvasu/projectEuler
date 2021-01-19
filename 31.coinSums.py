@@ -9,14 +9,14 @@ start = time.time()
 
 def coinSums():
     count = 0
-    for i in range (0,200):
-        for j in range(0,100):
-            for k in range(0,40):
-                for l in range(0,20):
-                    for m in range(0,10):
-                        for n in range(0,4):
-                            for o in range(0,2):
-                                if i*0.01+j*0.02+k*0.05+l*0.1+m*0.2+n*0.5+o*1+p*2 == 2:
+    for i in range (0,3):
+        for j in range(0,5):
+            for k in range(0,11):
+                for l in range(0,21):
+                    for m in range(0,41):
+                        for n in range(0,101):
+                            for o in range(0,201):
+                                if i*1+j*0.5+k*0.2+l*0.1+m*0.05+n*0.02+o*0.01 == 2:
                                     count += 1
     return count + 1
 

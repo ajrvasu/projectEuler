@@ -2,12 +2,13 @@
 
 # Expected answer - 137846528820
 
-# The math behind this is factorial and the Binomial coeeficient gives the results for any such grid
+def latticePaths(i,j, memoize = {}):
+    key = str(i) + ',' + str(j)
+    if i == 0 or j == 0: return 1
+    if i == 1 and j == 1: return 2
+    if key in memoize:
+        return memoize[key]
+    memoize[key] =  latticePaths(i-1,j) + latticePaths(i,j-1)
+    return memoize[key]
 
-import math
-
-def paths(n,k):
-    paths = int((math.factorial(n+k))/ (math.factorial(n) * math.factorial(k)))
-    return paths
-
-print(paths(20,20))
+print(latticePaths(20,20))
